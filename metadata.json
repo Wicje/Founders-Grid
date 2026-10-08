@@ -1,0 +1,6 @@
+{
+  "name": "Tenity — Global Fintech Innovation & Early-Stage Ecosystem",
+  "description": "Tenity is a global fintech innovation platform and early-stage venture fund backing founders and partnering with corporates at the convergence of fintech, AI, and digital assets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
