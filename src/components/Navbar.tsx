@@ -11,12 +11,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick, onNavigate }) =>
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: 'Venture Capital', target: 'hybrid-stage' },
-    { label: 'Innovation Services', target: 'difference-section' },
-    { label: 'Startups', target: 'proof-numbers' },
-    { label: 'Global Hubs', target: 'global-hubs' },
-    { label: 'FAQ', target: 'faq-section' },
-    { label: 'Orbit', target: 'orbit-section' },
+    { label: 'Values', target: 'difference-section' },
+    { label: 'How it Works', target: 'hybrid-stage' },
+    { label: 'Featured Products', target: 'featured-products' },
+    { label: 'Join Community', target: 'join-community' },
+    { label: 'Rules & FAQ', target: 'faq-section' },
   ];
 
   const handleLinkClick = (target: string) => {
@@ -66,7 +65,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick, onNavigate }) =>
             onClick={onContactClick}
             className="bg-[#f0386b] hover:bg-[#d82458] active:bg-[#c01d4b] text-white text-[13px] sm:text-[14px] md:text-[15px] font-bold px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-full transition-all shadow-md hover:shadow-xl hover:scale-[1.04] active:scale-[0.98] cursor-pointer whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f0386b] focus-visible:ring-offset-2"
           >
-            Contact
+            Join Free
           </button>
 
           {/* Mobile hamburger button */}

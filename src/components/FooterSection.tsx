@@ -12,35 +12,32 @@ export const FooterSection: React.FC<FooterSectionProps> = ({
   onLegalClick,
   onNewsletterSuccess,
 }) => {
-  const hubs = [
-    'Zurich',
-    'London',
-    'Singapore',
-    'Hong Kong',
-    'Madrid',
-    'Istanbul',
+  const communityChannels = [
+    'WhatsApp Community',
+    'Discord Server',
+    'Weekly Newsletter',
+    'Volunteer Sign-up',
+    'Roadmap Hubs',
   ];
 
   const socialLinks = [
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/company/tenity' },
+    { label: 'Submit Product [Form Link Placeholder]', href: '#' },
+    { label: 'WhatsApp', href: '#' },
+    { label: 'Discord', href: '#' },
     { label: 'X (Twitter)', href: 'https://x.com/ArchJosephan' },
-    { label: 'Medium', href: 'https://medium.com/@tenity' },
-    { label: 'TG Europe', href: '#' },
-    { label: 'TG Asia', href: '#' },
-    { label: 'TG UK', href: '#' },
-    { label: 'Youtube', href: 'https://youtube.com/@tenity' },
+    { label: 'Instagram', href: '#' },
   ];
 
   return (
     <footer className="bg-black text-white pt-24 pb-12 overflow-hidden border-t border-white/10">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-12">
         
-        {/* Tenity Logo */}
+        {/* Founders Grid Logo */}
         <div className="mb-10 sm:mb-14">
           <TenityLogo theme="dark" size="md" />
         </div>
 
-        {/* Main Grid: Stay in our orbit & Hubs */}
+        {/* Main Grid: Stay in our orbit & Channels */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-start mb-16 sm:mb-20">
           
           {/* Left: Giant Headline */}
@@ -51,21 +48,29 @@ export const FooterSection: React.FC<FooterSectionProps> = ({
             </h2>
           </div>
 
-          {/* Right: Hubs List */}
+          {/* Right: Community Channels List & Contact Email */}
           <div className="lg:col-span-5 lg:pt-4">
             <h4 className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider mb-4 sm:mb-5">
-              Hubs
+              Community Channels &amp; Contact
             </h4>
-            <div className="flex flex-wrap items-center gap-x-6 sm:gap-x-8 gap-y-3 text-[15px] sm:text-base md:text-[17px] text-white/85 font-semibold">
-              {hubs.map((hub) => (
+            <div className="flex flex-wrap items-center gap-x-6 sm:gap-x-8 gap-y-3 text-[15px] sm:text-base md:text-[17px] text-white/85 font-semibold mb-6">
+              {communityChannels.map((item) => (
                 <span
-                  key={hub}
+                  key={item}
                   className="hover:text-white transition-colors cursor-pointer hover:underline underline-offset-4"
-                  onClick={() => onLegalClick?.(`Tenity Hub — ${hub}`)}
+                  onClick={() => onLegalClick?.(`Founders Grid — ${item}`)}
                 >
-                  {hub}
+                  {item}
                 </span>
               ))}
+            </div>
+
+            {/* Direct Contact Email placeholder */}
+            <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
+              <span className="text-xs font-mono uppercase text-white/60 block mb-1">Direct Contact</span>
+              <div className="text-sm sm:text-base font-mono text-[#f0386b] font-bold select-all">
+                [Contact Email: hello@foundersgrid.co placeholder]
+              </div>
             </div>
           </div>
 
@@ -82,7 +87,7 @@ export const FooterSection: React.FC<FooterSectionProps> = ({
           {/* Right: Explanatory Copy */}
           <div className="lg:col-span-5">
             <p className="text-white/80 text-[15px] sm:text-base md:text-lg leading-relaxed max-w-md font-normal">
-              Get insights, stories, and opportunities from across our global ecosystem - and listen to our podcast on the ideas shaping finance and tech.
+              Featured products in your inbox every week (5–10 new products), community test builds, and monthly traction issues. No spam, 100% free.
             </p>
           </div>
 
@@ -93,7 +98,7 @@ export const FooterSection: React.FC<FooterSectionProps> = ({
           <SocialMediaFollow />
         </div>
 
-        {/* Bottom Bar */}
+        {/* Bottom Bar with Disclaimers & Placeholders */}
         <div className="pt-8 sm:pt-10 border-t border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-xs sm:text-sm text-white/70">
           
           {/* Social Links */}
@@ -102,41 +107,46 @@ export const FooterSection: React.FC<FooterSectionProps> = ({
               <a
                 key={link.label}
                 href={link.href}
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-white transition-colors"
+                className="hover:text-white transition-colors font-mono text-xs"
               >
                 {link.label}
               </a>
             ))}
           </div>
 
-          {/* Copyright & Legal */}
+          {/* Copyright, Legal & Disclaimers */}
           <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 text-white/60">
-            <span>&copy; 2026 Tenity Group AG</span>
+            <span>&copy; 2026 Founders Grid</span>
             <span aria-hidden="true" className="hidden sm:inline">&mdash;</span>
             <button
-              onClick={() => onLegalClick?.('Privacy Policy')}
+              onClick={() => onLegalClick?.('Community Rules')}
               className="hover:text-white transition-colors underline-offset-2 hover:underline cursor-pointer"
             >
-              Privacy Policy
+              Community Rules
             </button>
             <span aria-hidden="true">|</span>
             <button
-              onClick={() => onLegalClick?.('Cookie policy')}
+              onClick={() => onLegalClick?.('Consent & Takedown Policy')}
               className="hover:text-white transition-colors underline-offset-2 hover:underline cursor-pointer"
             >
-              Cookie policy
+              Consent &amp; Takedown Policy
             </button>
             <span aria-hidden="true">|</span>
             <button
-              onClick={() => onLegalClick?.('Cookie preferences')}
+              onClick={() => onLegalClick?.('Transparency & Disclaimers')}
               className="hover:text-white transition-colors underline-offset-2 hover:underline cursor-pointer"
             >
-              Cookie preferences
+              Disclaimers
             </button>
           </div>
 
+        </div>
+
+        {/* Legal Disclaimer Box */}
+        <div className="mt-6 pt-4 border-t border-white/5 text-[11px] text-white/50 leading-relaxed font-normal">
+          <p>
+            Notice: Founders Grid is a digital community for builders in software, hardware, and creative work to gain visibility and test products. We do not provide funding, guarantee investor responses, or claim unconfirmed sponsorships. Before showing founder pages to investors, have a lawyer review the consent and disclaimer wording first.
+          </p>
         </div>
 
       </div>

@@ -49,27 +49,26 @@ export const TENITY_HUBS: HubData[] = [
     lat: 47.3769,
     lon: 8.5417,
     globeIndex: 1,
-    startupsCount: 140,
-    alumniCount: 122,
-    activeCohort: 18,
-    pocsCompleted: 94,
-    capitalRaised: '$145M+',
+    startupsCount: 24,
+    alumniCount: 20,
+    activeCohort: 4,
+    pocsCompleted: 16,
+    capitalRaised: 'Free ($0)',
     timeZone: 'Europe/Zurich',
-    role: 'Global Headquarters & Core Fund',
+    role: 'Central Europe Community • Physical Hub [Roadmap]',
     flagshipPrograms: [
-      'Global FinTech Accelerator (Flagship)',
-      'SIX Corporate Sandbox & PoC Lab',
-      'Swiss WealthTech Innovation Residency',
+      'Weekly Newsletter Showcase',
+      'Community Peer Testing Circles',
+      'Builder Product Demos',
     ],
-    keyPartners: ['SIX Group', 'UBS', 'Julius Bär', 'Generali'],
+    keyPartners: ['WhatsApp Cohort', 'Discord Hub', 'Community Testers'],
     focusSectors: [
-      { sector: 'WealthTech', percentage: 38 },
-      { sector: 'Banking & Core Infra', percentage: 32 },
-      { sector: 'Digital Assets', percentage: 20 },
-      { sector: 'RegTech', percentage: 10 },
+      { sector: 'Software', percentage: 45 },
+      { sector: 'Hardware', percentage: 30 },
+      { sector: 'Creative', percentage: 25 },
     ],
     summary:
-      'Tenity global headquarters. The central European nexus connecting private banks, institutional stock exchanges, and tier-1 asset management innovation.',
+      'Central European digital cluster. Started online first, uniting software, hardware, and creative makers with physical hubs planned later.',
   },
   {
     id: 'london',
@@ -79,27 +78,26 @@ export const TENITY_HUBS: HubData[] = [
     lat: 51.5074,
     lon: -0.1278,
     globeIndex: 1,
-    startupsCount: 85,
-    alumniCount: 73,
-    activeCohort: 12,
-    pocsCompleted: 62,
-    capitalRaised: '$92M+',
+    startupsCount: 30,
+    alumniCount: 25,
+    activeCohort: 5,
+    pocsCompleted: 20,
+    capitalRaised: 'Free ($0)',
     timeZone: 'Europe/London',
-    role: 'UK & Cross-Border Capital Hub',
+    role: 'UK & Western Europe Community • Physical Hub [Roadmap]',
     flagshipPrograms: [
-      'UK Open Banking & Payments Sprint',
-      'Cross-Border FX & Liquidity Venture Lab',
-      'Next-Gen Compliance & AML Intelligence',
+      'UK Software & Hardware Testing Sprint',
+      'Open Builder Office Hours',
+      'Monthly Traction Review',
     ],
-    keyPartners: ['Barclays', 'LSEG', 'Standard Chartered', 'NatWest'],
+    keyPartners: ['WhatsApp Cohort', 'Discord Hub', 'Community Testers'],
     focusSectors: [
-      { sector: 'Payments & FX', percentage: 40 },
-      { sector: 'Open Banking', percentage: 28 },
-      { sector: 'RegTech & AI', percentage: 22 },
-      { sector: 'InsurTech', percentage: 10 },
+      { sector: 'Software', percentage: 50 },
+      { sector: 'Hardware', percentage: 25 },
+      { sector: 'Creative', percentage: 25 },
     ],
     summary:
-      'Positioned at the epicentre of Europe’s deepest capital markets, scaling cross-border liquidity protocols and algorithmic regtech.',
+      'UK and Northern European builder community sharing early iterations and getting kind, specific peer feedback.',
   },
   {
     id: 'singapore',
@@ -109,27 +107,26 @@ export const TENITY_HUBS: HubData[] = [
     lat: 1.3521,
     lon: 103.8198,
     globeIndex: 2,
-    startupsCount: 110,
-    alumniCount: 96,
-    activeCohort: 14,
-    pocsCompleted: 78,
-    capitalRaised: '$118M+',
+    startupsCount: 22,
+    alumniCount: 18,
+    activeCohort: 4,
+    pocsCompleted: 14,
+    capitalRaised: 'Free ($0)',
     timeZone: 'Asia/Singapore',
-    role: 'Asia-Pacific Regional Gateway',
+    role: 'Southeast Asia Community • Physical Hub [Roadmap]',
     flagshipPrograms: [
-      'APAC FinTech & Embedded Finance Incubator',
-      'MAS Green FinTech & ESG Transition Track',
-      'Institutional DeFi & Tokenization Sandbox',
+      'APAC Builder Testing Cohort',
+      'Hardware & IoT Maker Exchange',
+      'Cross-Timezone Feedback Hub',
     ],
-    keyPartners: ['DBS Bank', 'Franklin Templeton', 'Monetary Authority of Singapore (MAS)', 'UOB'],
+    keyPartners: ['WhatsApp Cohort', 'Discord Hub', 'Community Testers'],
     focusSectors: [
-      { sector: 'Embedded Finance', percentage: 35 },
-      { sector: 'Trade Finance', percentage: 25 },
-      { sector: 'ESG & Green Tech', percentage: 22 },
-      { sector: 'Web3 & Settlement', percentage: 18 },
+      { sector: 'Software', percentage: 40 },
+      { sector: 'Hardware', percentage: 35 },
+      { sector: 'Creative', percentage: 25 },
     ],
     summary:
-      'The gateway to Southeast Asia, driving embedded commerce, green financial instruments, and digital asset custody with leading regional banks.',
+      'Southeast Asian digital home for builders. Peer testing and visibility across software, hardware devices, and creative tooling.',
   },
   {
     id: 'hongkong',
@@ -139,27 +136,26 @@ export const TENITY_HUBS: HubData[] = [
     lat: 22.3193,
     lon: 114.1694,
     globeIndex: 2,
-    startupsCount: 65,
-    alumniCount: 56,
-    activeCohort: 9,
-    pocsCompleted: 44,
-    capitalRaised: '$64M+',
+    startupsCount: 16,
+    alumniCount: 14,
+    activeCohort: 2,
+    pocsCompleted: 10,
+    capitalRaised: 'Free ($0)',
     timeZone: 'Asia/Hong_Kong',
-    role: 'Greater Bay Area & InsurTech Hub',
+    role: 'East Asia Community • Physical Hub [Roadmap]',
     flagshipPrograms: [
-      'Greater Bay Area Cross-Border Sandbox',
-      'InsurTech Health & Life Innovation Lab',
-      'Wealth Management Connect Accelerator',
+      'East Asia Maker Sprint',
+      'Hardware Prototype Showcase',
+      'Digital Craft Peer Reviews',
     ],
-    keyPartners: ['AIA', 'Hang Seng Bank', 'Cyberport', 'HKEX'],
+    keyPartners: ['WhatsApp Cohort', 'Discord Hub', 'Community Testers'],
     focusSectors: [
-      { sector: 'InsurTech', percentage: 42 },
-      { sector: 'Cross-Border Wealth', percentage: 30 },
-      { sector: 'Virtual Banking', percentage: 18 },
-      { sector: 'GovTech/Identity', percentage: 10 },
+      { sector: 'Hardware', percentage: 40 },
+      { sector: 'Software', percentage: 35 },
+      { sector: 'Creative', percentage: 25 },
     ],
     summary:
-      'Connecting international founders with the Greater Bay Area and Asia’s largest life insurance and private wealth syndicates.',
+      'Connecting independent makers, firmware builders, and creative designers across East Asia.',
   },
   {
     id: 'madrid',
@@ -169,27 +165,26 @@ export const TENITY_HUBS: HubData[] = [
     lat: 40.4168,
     lon: -3.7038,
     globeIndex: 1,
-    startupsCount: 55,
-    alumniCount: 47,
-    activeCohort: 8,
-    pocsCompleted: 38,
-    capitalRaised: '$42M+',
+    startupsCount: 18,
+    alumniCount: 15,
+    activeCohort: 3,
+    pocsCompleted: 12,
+    capitalRaised: 'Free ($0)',
     timeZone: 'Europe/Madrid',
-    role: 'Southern Europe & LatAm Bridge',
+    role: 'Southern Europe Community • Physical Hub [Roadmap]',
     flagshipPrograms: [
-      'Southern Europe FinTech Track',
-      'Ibero-America Venture Clienting Sprint',
-      'SME Neo-banking & Lending Accelerator',
+      'Southern Europe Builder Circle',
+      'Creative Design & Web App Demos',
+      'Kind Peer Feedback Sprint',
     ],
-    keyPartners: ['Banco Santander', 'BBVA Open Innovation', 'MAPFRE'],
+    keyPartners: ['WhatsApp Cohort', 'Discord Hub', 'Community Testers'],
     focusSectors: [
-      { sector: 'SME Neo-banking', percentage: 36 },
-      { sector: 'Lending & Credit Scoring', percentage: 30 },
-      { sector: 'InsurTech', percentage: 24 },
-      { sector: 'Payments', percentage: 10 },
+      { sector: 'Creative', percentage: 40 },
+      { sector: 'Software', percentage: 35 },
+      { sector: 'Hardware', percentage: 25 },
     ],
     summary:
-      'The high-velocity launchpad bridging Southern European innovation with Latin American enterprise networks and leading Spanish financial institutions.',
+      'Spanish and Southern European makers sharing creative products and web tools with kind community feedback.',
   },
   {
     id: 'istanbul',
@@ -199,27 +194,26 @@ export const TENITY_HUBS: HubData[] = [
     lat: 41.0082,
     lon: 28.9784,
     globeIndex: 1,
-    startupsCount: 40,
-    alumniCount: 34,
-    activeCohort: 7,
-    pocsCompleted: 26,
-    capitalRaised: '$28M+',
+    startupsCount: 15,
+    alumniCount: 12,
+    activeCohort: 3,
+    pocsCompleted: 10,
+    capitalRaised: 'Free ($0)',
     timeZone: 'Europe/Istanbul',
-    role: 'Eurasia Innovation Nexus',
+    role: 'Eurasia Community • Physical Hub [Roadmap]',
     flagshipPrograms: [
-      'Eurasian Banking API Incubator',
-      'Cross-Regional Islamic FinTech & Trade Tech',
-      'Retail Digital Banking Sprint',
+      'Eurasian Software & Game Dev Sprint',
+      'Hardware Maker Roundtables',
+      'Weekly Traction Highlights',
     ],
-    keyPartners: ['Türkiye İş Bankası', 'QNB Finansbank', 'Borsa Istanbul'],
+    keyPartners: ['WhatsApp Cohort', 'Discord Hub', 'Community Testers'],
     focusSectors: [
-      { sector: 'Open Banking APIs', percentage: 38 },
-      { sector: 'Retail FinTech', percentage: 32 },
-      { sector: 'Islamic FinTech', percentage: 18 },
-      { sector: 'Trade & Logistics', percentage: 12 },
+      { sector: 'Software', percentage: 45 },
+      { sector: 'Hardware', percentage: 30 },
+      { sector: 'Creative', percentage: 25 },
     ],
     summary:
-      'Straddling two continents, unlocking rapid market expansion across Türkiye, Central Asia, and the Middle East for digital banking disruptors.',
+      'Cross-continental hub connecting builders across Europe and Asia with open doors regardless of background.',
   },
 ];
 
@@ -951,7 +945,7 @@ export const GlobalHubsVisualization: React.FC<GlobalHubsVisualizationProps> = (
             {/* Top eyebrow badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono tracking-wider font-semibold uppercase mb-4 bg-black/5 dark:bg-white/10 text-slate-700 dark:text-slate-300 border border-black/10 dark:border-white/15">
               <span className="w-2 h-2 rounded-full bg-[#F0386B] animate-pulse" />
-              GLOBAL PRESENCE & ACCELERATION HUBS
+              BUILDER CLUSTERING • ONLINE FIRST, PHYSICAL HUBS LATER
             </div>
 
             {/* Main Title inspired directly by Khula Operates Global */}
@@ -965,7 +959,7 @@ export const GlobalHubsVisualization: React.FC<GlobalHubsVisualizationProps> = (
                 isLight ? 'text-slate-600' : 'text-slate-300'
               }`}
             >
-              Tenity unites world-class founders and institutional banking giants across 6 international financial nerve centers, deploying pre-seed venture capital, bespoke PoC sandboxes, and cross-border expansion rails.
+              The Silicon Valley idea of visibility and clustering, started online first, with physical hubs planned later. Giving visibility to software, hardware, and creative builders wherever they make things.
             </p>
           </div>
 
@@ -1339,15 +1333,15 @@ export const GlobalHubsVisualization: React.FC<GlobalHubsVisualizationProps> = (
         >
           <div className="flex flex-wrap items-center gap-4">
             <span className="font-bold text-slate-900 dark:text-white">
-              TENITY GLOBAL FOOTPRINT:
+              FOUNDERS GRID GLOBAL REACH:
             </span>
-            <span>06 METROPOLITAN HUBS</span>
+            <span>STARTED ONLINE FIRST</span>
             <span>•</span>
-            <span>495+ ACCELERATED STARTUPS</span>
+            <span>100% FREE FOR BUILDERS</span>
             <span>•</span>
-            <span>280+ VALIDATED POCS</span>
+            <span>5–10 PRODUCTS FEATURED WEEKLY</span>
             <span>•</span>
-            <span>$480M+ ECOSYSTEM CAPITAL</span>
+            <span>PHYSICAL HUBS PLANNED LATER</span>
           </div>
 
           <div className="flex items-center gap-2 tracking-widest text-[11px] uppercase">

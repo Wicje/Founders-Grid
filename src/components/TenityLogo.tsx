@@ -31,7 +31,7 @@ export const TenityLogo: React.FC<TenityLogoProps> = ({
 
   return (
     <div className={`inline-flex items-center font-bold tracking-tight select-none ${sizeClasses[size]} ${textColor} ${className}`}>
-      {/* Tenity distinctive modern triangle icon */}
+      {/* Founders Grid distinctive modern grid geometric icon */}
       <svg 
         width={dim} 
         height={dim} 
@@ -40,20 +40,45 @@ export const TenityLogo: React.FC<TenityLogoProps> = ({
         xmlns="http://www.w3.org/2000/svg"
         className="shrink-0 transition-transform hover:scale-105"
       >
-        <path 
-          d="M12 2.5L22 20.5H2L12 2.5Z" 
+        <rect 
+          x="3" 
+          y="3" 
+          width="7.5" 
+          height="7.5" 
+          rx="2"
           stroke={iconColor} 
-          strokeWidth="3.2" 
-          strokeLinejoin="round" 
+          strokeWidth="2.4" 
         />
-        <circle 
-          cx="12" 
-          cy="14" 
-          r="2.2" 
-          fill={iconColor} 
+        <rect 
+          x="13.5" 
+          y="3" 
+          width="7.5" 
+          height="7.5" 
+          rx="2"
+          stroke={iconColor} 
+          strokeWidth="2.4" 
+        />
+        <rect 
+          x="3" 
+          y="13.5" 
+          width="7.5" 
+          height="7.5" 
+          rx="2"
+          stroke={iconColor} 
+          strokeWidth="2.4" 
+        />
+        <rect 
+          x="13.5" 
+          y="13.5" 
+          width="7.5" 
+          height="7.5" 
+          rx="2"
+          fill="#f0386b"
+          stroke="#f0386b" 
+          strokeWidth="2.4" 
         />
       </svg>
-      <span className="font-extrabold tracking-tight">Tenity</span>
+      <span className="font-extrabold tracking-tight">Founders Grid</span>
     </div>
   );
 };

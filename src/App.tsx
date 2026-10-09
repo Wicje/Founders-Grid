@@ -13,7 +13,6 @@ import { ProofInNumbersSection } from './components/ProofInNumbersSection';
 import { AmbitionResultsSection } from './components/AmbitionResultsSection';
 import { ManyPathsSection } from './components/ManyPathsSection';
 import { ImpossibleToPossibleSection } from './components/ImpossibleToPossibleSection';
-import { GlobalHubsVisualization } from './components/GlobalHubsVisualization';
 import { FAQSection } from './components/FAQSection';
 import { FooterSection } from './components/FooterSection';
 import { ContactModal } from './components/ContactModal';
@@ -26,53 +25,54 @@ export default function App() {
   // Handlers for interactive details
   const handleExploreVenture = () => {
     setModalData({
-      badge: 'Venture Capital',
-      title: 'Tenity Seed & Pre-Seed Fund',
-      subtitle: 'Backing world-class fintech founders at the earliest inflection points.',
+      badge: 'Product Submission',
+      title: 'Submit Your Product to Founders Grid',
+      subtitle: 'Access is 100% free. Founders are never charged to be featured.',
       content:
-        'Tenity invests early in visionary teams reinventing banking, wealth tech, crypto infrastructure, regulatory intelligence, and embedded insurance. Our portfolio companies gain unfair distribution advantage through our global financial network.',
+        'Founders submit products through a short form. Featured products receive their own dedicated page, spotlight in our weekly newsletter (5–10 new products), and peer testing from fellow makers.',
       bullets: [
-        'Initial tickets up to $250k with follow-on reserves',
-        'Co-investment syndication with tier-1 venture firms',
-        'Access to 65+ banking, insurance, and wealth partners',
-        'Dedicated portfolio support in Zurich, London, Singapore & Madrid',
+        'Submission Form: [Submission Form Link: Add your link here]',
+        'Free forever: founders are never charged',
+        'Featured product page with 100% takedown control',
+        'Products also shared on Instagram and X',
       ],
-      actionText: 'Apply for Investment',
+      actionText: 'Submit Product Form',
       onAction: () => setIsContactOpen(true),
     });
   };
 
   const handleExploreInnovation = () => {
     setModalData({
-      badge: 'Innovation Services',
-      title: 'Enterprise Innovation & Venture Clienting',
-      subtitle: 'Converting corporate strategic challenges into validated commercial deployments.',
+      badge: 'Community',
+      title: 'Join the Founders Grid Community',
+      subtitle: 'A digital home for software, hardware, and creative builders.',
       content:
-        'We design and run bespoke accelerators, Proof-of-Concept sandboxes, and venture client frameworks for financial institutions including UBS, SIX, Generali, and Julius Bär. Our structured vetting replaces vanity innovation with commercial velocity.',
+        'The Silicon Valley idea of visibility and clustering, started online first, with physical hubs planned later. Giving visibility to software, hardware, and creative builders, including people who haven’t been noticed yet.',
       bullets: [
-        'Structured 12-week PoC acceleration cycles',
-        'Proprietary scouting matching your specific digital stack',
-        'Comprehensive security & regulatory pre-screening',
-        'Over 80% commercial contract conversion rate',
+        'WhatsApp community (announcements plus cohort groups)',
+        'Discord server for builders & testers',
+        'Weekly newsletter featuring 5–10 new products',
+        'Monthly issue on products gaining real traction',
       ],
-      actionText: 'Partner With Tenity',
+      actionText: 'Join Free',
       onAction: () => setIsContactOpen(true),
     });
   };
 
   const handleApproachClick = () => {
     setModalData({
-      badge: 'Methodology',
-      title: 'The Tenity Hybrid Model',
-      subtitle: 'Why bringing capital and corporate adoption together wins.',
+      badge: 'Blueprint',
+      title: 'A Digital Community Model That Works',
+      subtitle: 'How Founders Grid operates for builders.',
       content:
-        'Traditional accelerators lack balance sheet capital; traditional VCs lack corporate enterprise distribution. Tenity unifies both under one roof: providing founders with capital and real clients simultaneously, while offering corporate partners vetted, production-ready solutions.',
+        'We celebrate people who make things. Shipping beats waiting, access is free, feedback is honest and kind, and doors are open regardless of background, stage, or discipline.',
       bullets: [
-        'Phase 1: Spotting early signals and technical breakthroughs',
-        'Phase 2: Co-designing pilots with actual business units',
-        'Phase 3: Scaling via capital injection and international rollout',
+        'Build: We celebrate people who make things',
+        'Progress over perfection: Shipping beats waiting',
+        'Access is free: Founders are never charged to be featured',
+        'Honest feedback: Given kindly and specifically',
       ],
-      actionText: 'Get in Touch',
+      actionText: 'Get Involved',
       onAction: () => setIsContactOpen(true),
     });
   };
@@ -80,36 +80,36 @@ export default function App() {
   const handlePillarClick = (pillarIndex: number) => {
     const pillars = [
       {
-        title: '01. Spotting what’s next',
-        subtitle: 'Trend scouting, startup sourcing & evaluation, market insight',
+        title: '01. Submitting what you make',
+        subtitle: 'Short submission form, product details, builder notes',
         content:
-          'Our global analyst team monitors thousands of fintech and AI ventures quarterly across Switzerland, the UK, Europe, and Asia. We spot market structural shifts before they become consensus.',
+          'Founders submit products through a short form. Two items need your real input: the submission form link and the contact email.',
         bullets: [
-          'Global pipeline of 2,000+ evaluated fintechs/year',
-          'Proprietary telemetry on regulatory shifts and AI adoption',
-          'Quarterly deep-dive thematic foresight reports',
+          'Submission Form: [Submission Form Link: Add your link here]',
+          'Contact Email: [Contact Email: hello@foundersgrid.co placeholder]',
+          'Zero fee to be featured or receive feedback',
         ],
       },
       {
-        title: '02. Creating what’s next',
-        subtitle: 'Co-designed programs, pilots, startup matching',
+        title: '02. Testing & honest feedback',
+        subtitle: 'Community members test each other\'s products',
         content:
-          'We bridge the gap between enterprise legacy infrastructure and agile startup solutions through structured sandboxes that de-risk integration and fast-track proof of concept.',
+          'Community members test each other’s products and give honest feedback, given kindly and specifically.',
         bullets: [
-          'Sprint-based architecture alignment',
-          'Real-data compliant sandboxing',
-          'Direct executive sponsor alignment',
+          'Constructive notes on usability and polish',
+          'Peer testing across software and hardware',
+          'Kind, specific suggestions from fellow makers',
         ],
       },
       {
-        title: '03. Scaling what’s next',
-        subtitle: 'Early-stage investment, co-investment, global network',
+        title: '03. Getting featured & visibility',
+        subtitle: 'Weekly newsletter, monthly traction issue, dedicated page',
         content:
-          'When pilots succeed, we double down with institutional capital, syndicate follow-on rounds with global venture partners, and launch the venture into our cross-border international hubs.',
+          'Featured products get their own page, which founders can take down at any time. Products are also shared on Instagram and X.',
         bullets: [
-          'Pre-seed and seed ticket lead capability',
-          'Global syndication network of 400+ family offices & funds',
-          'Cross-border expansion support across 6 global hubs',
+          'Weekly newsletter (5–10 new products)',
+          'Monthly issue on products gaining real traction',
+          '100% founder consent and takedown control',
         ],
       },
     ];
@@ -117,12 +117,12 @@ export default function App() {
     const selected = pillars[pillarIndex - 1];
     if (selected) {
       setModalData({
-        badge: 'Core Capability',
+        badge: 'How It Works',
         title: selected.title,
         subtitle: selected.subtitle,
         content: selected.content,
         bullets: selected.bullets,
-        actionText: 'Learn More',
+        actionText: 'Join Community',
         onAction: () => setIsContactOpen(true),
       });
     }
@@ -130,103 +130,87 @@ export default function App() {
 
   const handleViewAllPartners = () => {
     setModalData({
-      badge: 'Global Network',
-      title: 'Tenity Partner Ecosystem',
-      subtitle: 'Trusted by the world’s leading financial institutions and tech protocols.',
+      badge: 'Community Channels',
+      title: 'Founders Grid Community & Distribution Channels',
+      subtitle: 'Connect across announcements, testing rooms, and newsletters.',
       content:
-        'Our partner network encompasses top-tier European banks, global payment networks, digital asset custodians, insurance conglomerates, and national monetary authorities collaborating to define the next era of finance.',
+        'Where builders gather to test products and get honest feedback. We do not claim sponsors or partners exist; our community is powered by independent makers.',
       bullets: [
-        'Strategic: SIX Group, UBS, Ripple, Julius Bär',
-        'Corporate: Generali Group, Worldline, Keyrock, VISA',
-        'Regional: Swisscom, PostFinance, Raiffeisen, Baloise',
-        'Hub Network: Over 65+ tier-1 institutions active globally',
+        'WhatsApp community (announcements plus cohort groups)',
+        'Discord server (builders and testers)',
+        'Weekly newsletter (5–10 new products)',
+        '[Partner / Ecosystem Placeholder — Open for Collaborations]',
       ],
-      actionText: 'Become a Partner',
+      actionText: 'Join Channels',
       onAction: () => setIsContactOpen(true),
     });
   };
 
   const handleStatClick = (label: string, value: string) => {
     setModalData({
-      badge: 'Proof In Numbers',
+      badge: 'Founders Grid Facts',
       title: `${value} — ${label}`,
-      content: `Our track record reflects institutional rigor and measurable impact. Through systematic acceleration and dedicated venture backing, we have created an enduring global fintech innovation footprint.`,
+      content: `Our numbers reflect actual community facts without invented statistics or funding claims.`,
       bullets: [
-        'Consistent top-quartile cohort survival rates',
-        'Over $350M+ in follow-on funding raised by alumni',
-        'Active presence across Switzerland, UK, Singapore, Spain, and Turkey',
+        'Access is free — founders are never charged to be featured',
+        'Weekly newsletter features 5–10 new products',
+        'Featured products get their own page with takedown control',
       ],
-      actionText: 'Explore Ecosystem',
+      actionText: 'Submit Product',
       onAction: () => setIsContactOpen(true),
     });
   };
 
   const handleReadMoreCaseStudy = (study: { title: string; desc: string; metrics: string }) => {
     setModalData({
-      badge: 'Case Study',
+      badge: 'Featured Product Placeholder',
       title: study.title,
       subtitle: study.desc,
       content:
-        'A comprehensive demonstration of how structured collaboration between agile fintech creators and established financial institutions delivers real commercial outcomes.',
+        'Placeholder card for upcoming community product features. Every featured product gets its own dedicated page, which founders can take down at any time.',
       bullets: [
-        `Key Impact: ${study.metrics}`,
-        'High-velocity enterprise pilot integration',
-        'Standardized compliance and procurement frameworks',
+        `Card status: ${study.metrics}`,
+        'Submission Form: [Submission Form Link: Add your link here]',
+        'Contact Email: [Contact Email: hello@foundersgrid.co placeholder]',
       ],
-      actionText: 'Discuss Your Program',
+      actionText: 'Submit Your Product',
       onAction: () => setIsContactOpen(true),
     });
   };
 
   const handleBentoClick = (title: string) => {
     setModalData({
-      badge: 'Orbit Stories',
+      badge: 'Founders Grid',
       title,
       content:
-        'At Tenity, we highlight real breakthrough stories from our cohorts, alumni, and ecosystem partners that demonstrate scalable market impact.',
+        'A digital community where builders in software, hardware, and creative work share what they are making, get honest feedback, and get featured.',
       bullets: [
-        'Published in our weekly Orbit newsletter',
-        'Detailed breakdown in our podcast series',
-        'Featuring founders and innovation executives',
+        'Weekly newsletter (5–10 new products)',
+        'Monthly traction issue',
+        '100% free with full takedown control',
       ],
-      actionText: 'Connect with Us',
-      onAction: () => setIsContactOpen(true),
-    });
-  };
-
-  const handleHubExplore = (hubName: string) => {
-    setModalData({
-      badge: 'Global Ecosystem',
-      title: `Tenity ${hubName} Hub`,
-      subtitle: `Accelerating local fintech pioneers with global venture capital and tier-1 corporate partnerships.`,
-      content: `Our ${hubName} team leads flagship accelerator tracks, enterprise innovation sandboxes, and bespoke corporate scouting. Connect with our local investment and program directors to explore cohorts or partnership opportunities.`,
-      bullets: [
-        'Dedicated on-the-ground program management and mentor network',
-        'Direct access to institutional banking and insurance partners',
-        'Cross-border expansion support across our other 5 global hubs',
-        'Fast-track application access for upcoming cohort cycles',
-      ],
-      actionText: `Contact ${hubName} Team`,
+      actionText: 'Join Community',
       onAction: () => setIsContactOpen(true),
     });
   };
 
   const handleLegalClick = (title: string) => {
-    if (title.startsWith('Tenity Hub — ')) {
-      const hubName = title.replace('Tenity Hub — ', '');
-      handleHubExplore(hubName);
+    if (title.startsWith('Founders Grid — ') || title.startsWith('Tenity Hub — ')) {
+      setIsContactOpen(true);
       return;
     }
     setModalData({
-      badge: 'Legal & Info',
+      badge: 'Rules, Consent & Disclaimers',
       title,
       content:
-        'Tenity Group AG is registered in Zurich, Switzerland. We are committed to absolute data privacy, transparent investor communications, and the highest compliance standards in European and global financial jurisdictions.',
+        'Founders Grid operates on clear rules, free access, and unconditional respect for builder consent. We do not provide funding, guarantee that investors will respond, or claim unconfirmed sponsorships.',
       bullets: [
-        'Fully GDPR and Swiss FADP compliant',
-        'Regularly audited corporate governance',
-        'Strict confidential treatment of founder IP and dealflow',
+        'Consent & takedown: founders can take down their page at any time',
+        'If planning to show founder pages to investors, have a lawyer review consent and disclaimer wording first',
+        'Contact: [Contact Email: hello@foundersgrid.co placeholder]',
       ],
+      actionText: 'Contact Us',
+      onAction: () => setIsContactOpen(true),
     });
   };
 
@@ -284,13 +268,10 @@ export default function App() {
       {/* 9. Light Section: "From impossible [pill] to possible" Bento */}
       <ImpossibleToPossibleSection onCardClick={handleBentoClick} />
 
-      {/* 10. Interactive Global Hubs & Data Visualization (Recharts + Interactive Vector Map) */}
-      <GlobalHubsVisualization onHubExplore={handleHubExplore} />
-
-      {/* 11. Dark Section: Infinity FAQ & Knowledge Exploration */}
+      {/* 10. Dark Section: Infinity FAQ & Knowledge Exploration */}
       <FAQSection />
 
-      {/* 12. Dark Section: "Stay in our orbit" & Footer */}
+      {/* 11. Dark Section: "Stay in our orbit" & Footer */}
       <FooterSection 
         onLegalClick={handleLegalClick}
         onNewsletterSuccess={(email) => {

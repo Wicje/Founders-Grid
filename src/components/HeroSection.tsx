@@ -40,7 +40,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           {/* Left Column: Big Bold Statement */}
           <div className="lg:col-span-7">
             <h1 className="text-[40px] min-[380px]:text-[48px] sm:text-[72px] md:text-[92px] lg:text-[112px] xl:text-[124px] font-extrabold tracking-[-0.04em] leading-[0.93] text-white">
-              <span className="block">Fintech</span>
+              <span className="block">Builder</span>
               <span className="block">makers</span>
               <span className="flex items-center flex-wrap gap-x-2">
                 <InlinePill theme="white" className="w-[68px] min-[380px]:w-[84px] sm:w-[116px] md:w-[140px] h-[30px] min-[380px]:h-[36px] sm:h-[50px] md:h-[60px] my-1 sm:my-1.5 shadow-md shrink-0" />
@@ -57,11 +57,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {/* Friendly ecosystem trust pill */}
             <div className="inline-flex items-center gap-2 sm:gap-2.5 text-xs sm:text-[13px] font-semibold uppercase tracking-wider text-white/85 bg-white/10 backdrop-blur-md px-3.5 sm:px-4 py-2 rounded-full w-fit mb-5 sm:mb-6 border border-white/15 shadow-sm">
               <span className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-[#f0386b] animate-pulse shrink-0" />
-              <span>Global Cohort Applications Open</span>
+              <span>A Digital Home for Builders • 100% Free</span>
             </div>
 
             <p className="text-white/90 text-[15px] sm:text-[18px] md:text-[20px] leading-[1.6] sm:leading-[1.65] font-normal max-w-[490px] mb-7 sm:mb-10">
-              Tenity is a fintech innovation platform that backs early-stage founders and partners with corporates at the convergence of fintech, AI, and digital assets.
+              Founders Grid is a digital community where builders in software, hardware, and creative work share what they're making, get honest feedback, and get featured.
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
@@ -69,7 +69,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 onClick={onExploreVenture}
                 className="group inline-flex items-center justify-center gap-3.5 px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-full border border-white/50 hover:border-white text-white text-[15px] sm:text-[16px] font-bold tracking-tight bg-white/5 hover:bg-white/15 active:bg-white/20 transition-all cursor-pointer shadow-lg hover:shadow-xl hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white w-full sm:w-auto text-center"
               >
-                <span>Venture Capital</span>
+                <span>Submit Product</span>
                 <span className="w-7 h-7 rounded-full border border-white/70 flex items-center justify-center group-hover:border-white transition-colors bg-white/5 shrink-0">
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
                 </span>
@@ -79,7 +79,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 onClick={onExploreInnovation}
                 className="group inline-flex items-center justify-center gap-3.5 px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-full border border-white/50 hover:border-white text-white text-[15px] sm:text-[16px] font-bold tracking-tight bg-white/5 hover:bg-white/15 active:bg-white/20 transition-all cursor-pointer shadow-lg hover:shadow-xl hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white w-full sm:w-auto text-center"
               >
-                <span>Innovation Services</span>
+                <span>Join Community</span>
                 <span className="w-7 h-7 rounded-full border border-white/70 flex items-center justify-center group-hover:border-white transition-colors bg-white/5 shrink-0">
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
                 </span>

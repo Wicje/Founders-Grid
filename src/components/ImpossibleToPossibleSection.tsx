@@ -29,7 +29,7 @@ export const ImpossibleToPossibleSection: React.FC<ImpossibleToPossibleSectionPr
 
           <div className="lg:col-span-5 pb-2 sm:pb-3">
             <p className="text-neutral-700 text-[15px] sm:text-lg md:text-[19px] leading-relaxed max-w-lg font-normal">
-              Quick stories of ventures and programmes that prove the impossible isn't just possible — it scales.
+              Stories and practices of builders proving that visibility, peer testing, and shipping make the impossible possible.
             </p>
           </div>
         </div>
@@ -37,9 +37,9 @@ export const ImpossibleToPossibleSection: React.FC<ImpossibleToPossibleSectionPr
         {/* Bento Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-5 sm:gap-6 md:gap-7">
           
-          {/* Card 1: Emerald Green Card ("The Latest from our Orbit") */}
+          {/* Card 1: Emerald Green Card ("Weekly Newsletter") */}
           <div
-            onClick={() => onCardClick?.('The Latest from our Orbit')}
+            onClick={() => onCardClick?.('Weekly Newsletter')}
             className="sm:col-span-1 lg:col-span-3 bg-[#00d68f] rounded-t-full sm:rounded-tr-full sm:rounded-tl-none sm:rounded-b-none p-8 sm:p-10 flex flex-col justify-between min-h-[280px] sm:min-h-[320px] md:min-h-[360px] cursor-pointer group hover:brightness-105 hover:scale-[1.02] transition-all shadow-md"
           >
             <div className="flex justify-end">
@@ -48,15 +48,16 @@ export const ImpossibleToPossibleSection: React.FC<ImpossibleToPossibleSectionPr
               </span>
             </div>
             <div>
+              <span className="text-xs font-mono uppercase tracking-wider text-black/70 block mb-1">5–10 Products</span>
               <h3 className="text-2xl sm:text-3xl md:text-[30px] font-extrabold text-neutral-900 tracking-tight leading-tight">
-                The Latest<br />from our<br />Orbit
+                Weekly<br />Newsletter<br />Spotlight
               </h3>
             </div>
           </div>
 
           {/* Card 2: Upcoming Events (Arched photo card with event celebration & maracas) */}
           <div
-            onClick={() => onCardClick?.('Upcoming Events')}
+            onClick={() => onCardClick?.('Community Testing Sessions')}
             className="sm:col-span-1 lg:col-span-3 relative rounded-t-full overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[360px] cursor-pointer group shadow-md bg-neutral-950 flex flex-col justify-end p-7 sm:p-9 border border-neutral-200 hover:scale-[1.02] transition-all"
           >
             {/* Visual background representation of festival/cocktail celebration */}
@@ -75,17 +76,17 @@ export const ImpossibleToPossibleSection: React.FC<ImpossibleToPossibleSectionPr
             <div className="relative z-20">
               <div className="flex items-center gap-2 text-white/90 mb-2 text-xs font-bold uppercase tracking-wider">
                 <Calendar size={14} className="text-[#f0386b]" />
-                <span>Global Calendar</span>
+                <span>Peer Feedback</span>
               </div>
               <h3 className="text-xl sm:text-2xl md:text-[26px] font-extrabold text-white tracking-tight leading-tight">
-                Upcoming Events
+                Community Testing Sessions
               </h3>
             </div>
           </div>
 
           {/* Card 3: Rocket Arched Card */}
           <div
-            onClick={() => onCardClick?.('Venture Accelerators')}
+            onClick={() => onCardClick?.('Progress Over Perfection')}
             className="sm:col-span-1 lg:col-span-2 relative rounded-t-full overflow-hidden min-h-[260px] sm:min-h-[320px] md:min-h-[360px] cursor-pointer group bg-black flex flex-col items-center justify-center p-7 sm:p-8 border border-neutral-900 shadow-md hover:scale-[1.02] transition-all"
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(240,56,107,0.3)_0%,_transparent_70%)]" />
@@ -94,19 +95,19 @@ export const ImpossibleToPossibleSection: React.FC<ImpossibleToPossibleSectionPr
                 <Rocket size={32} className="transform -rotate-45" />
               </div>
               <span className="text-xs sm:text-sm font-bold text-white/95 uppercase tracking-widest">
-                Accelerate
+                Ship Early
               </span>
             </div>
           </div>
 
           {/* Card 4: Tall Right Coworking / Startup Team Photo Card */}
           <div
-            onClick={() => onCardClick?.('Nordic Fintech Deal')}
+            onClick={() => onCardClick?.('Started Online First')}
             className="sm:col-span-1 lg:col-span-4 lg:row-span-2 relative rounded-3xl overflow-hidden min-h-[320px] sm:min-h-[360px] md:min-h-full cursor-pointer group shadow-lg bg-neutral-900 border border-neutral-200 hover:scale-[1.01] transition-all"
           >
             <img
               src="/src/assets/images/bento_coworking_laptops_1791458279835.jpg"
-              alt="Startup founders coding together late at night"
+              alt="Founders Grid builders collaborating"
               className="absolute inset-0 w-full h-full object-cover filter brightness-95 group-hover:scale-105 transition-transform duration-700 ease-out"
               referrerPolicy="no-referrer"
             />
@@ -114,29 +115,29 @@ export const ImpossibleToPossibleSection: React.FC<ImpossibleToPossibleSectionPr
             
             <div className="relative z-10 h-full flex flex-col justify-end p-8 sm:p-10 md:p-12 text-white">
               <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white/90 mb-2 sm:mb-3">
-                Ecosystem Spotlight
+                The Clustering Idea
               </span>
               <h3 className="text-2xl sm:text-3xl md:text-[28px] font-extrabold tracking-tight text-white mb-2.5 sm:mb-3 leading-snug">
-                Collaborative Builder Hubs
+                Started Online First
               </h3>
               <p className="text-sm sm:text-base text-white/85 leading-relaxed max-w-[340px]">
-                High-intensity co-working, hackathons, and roundtables across 6 global hubs.
+                The Silicon Valley idea of visibility and clustering, started online first, with physical hubs planned later.
               </p>
             </div>
           </div>
 
-          {/* Card 5: Large Coral Red 100+ PoCs Card with Wireframe Globe */}
+          {/* Card 5: Large Coral Red Free Access Card with Wireframe Globe */}
           <div
-            onClick={() => onCardClick?.('Visa Innovation Program Europe')}
+            onClick={() => onCardClick?.('Free Access Policy')}
             className="sm:col-span-2 lg:col-span-5 bg-[#f0386b] rounded-3xl p-8 sm:p-10 md:p-12 text-white min-h-[300px] sm:min-h-[330px] flex flex-col sm:flex-row items-center justify-between overflow-hidden cursor-pointer group shadow-xl relative hover:scale-[1.01] transition-all"
           >
             {/* Left Content */}
             <div className="relative z-10 max-w-[320px] mb-6 sm:mb-0 text-center sm:text-left">
-              <span className="text-7xl sm:text-8xl lg:text-[104px] font-black tracking-tight leading-none block mb-3 sm:mb-4 tabular-nums drop-shadow-sm">
-                100+
+              <span className="text-6xl sm:text-7xl lg:text-[88px] font-black tracking-tight leading-none block mb-3 sm:mb-4 tabular-nums drop-shadow-sm">
+                100% Free
               </span>
               <p className="text-base sm:text-lg md:text-[20px] font-bold text-white/95 leading-snug">
-                PoCs facilitated through the Visa Innovation Program Europe
+                Founders are never charged to be featured. No sponsors or funding claims.
               </p>
             </div>
 
@@ -172,19 +173,22 @@ export const ImpossibleToPossibleSection: React.FC<ImpossibleToPossibleSectionPr
             </div>
           </div>
 
-          {/* Card 6: Light Periwinkle Blue Card ("One of Denmark's largest...") */}
+          {/* Card 6: Light Periwinkle Blue Card ("Founder Takedown Control") */}
           <div
-            onClick={() => onCardClick?.('Danish AI/Fintech Pre-seed Round')}
-            className="sm:col-span-2 lg:col-span-3 bg-[#8ab4f8] rounded-3xl p-8 sm:p-10 flex flex-col justify-end min-h-[240px] sm:min-h-[290px] md:min-h-[330px] cursor-pointer group hover:bg-[#7aa7f0] hover:scale-[1.02] transition-all shadow-md"
+            onClick={() => onCardClick?.('Takedown & Consent Policy')}
+            className="sm:col-span-2 lg:col-span-3 bg-[#8ab4f8] rounded-3xl p-8 sm:p-10 flex flex-col justify-between min-h-[240px] sm:min-h-[290px] md:min-h-[330px] cursor-pointer group hover:bg-[#7aa7f0] hover:scale-[1.02] transition-all shadow-md"
           >
             <div className="flex justify-end mb-6 sm:mb-auto">
               <span className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/10 flex items-center justify-center text-black group-hover:scale-110 transition-transform">
                 <ArrowUpRight size={19} />
               </span>
             </div>
-            <h3 className="text-xl sm:text-2xl md:text-[27px] font-extrabold text-neutral-900 tracking-tight leading-snug">
-              One of Denmark's largest AI/Fintech pre-seed rounds
-            </h3>
+            <div>
+              <span className="text-xs font-mono uppercase tracking-wider text-black/70 block mb-1">Your Page • Your Choice</span>
+              <h3 className="text-xl sm:text-2xl md:text-[27px] font-extrabold text-neutral-900 tracking-tight leading-snug">
+                Founders can take their page down at any time
+              </h3>
+            </div>
           </div>
 
         </div>

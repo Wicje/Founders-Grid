@@ -5,7 +5,7 @@ import { answerTenityQuestion } from '../utils/tenityKnowledge';
 
 interface FAQItem {
   id: string;
-  category: 'programs' | 'investment' | 'corporate' | 'hubs';
+  category: 'rules' | 'takedown' | 'featured' | 'free' | 'community';
   question: string;
   answer: string;
   tag?: string;
@@ -13,68 +13,68 @@ interface FAQItem {
 
 const PRESET_FAQS: FAQItem[] = [
   {
-    id: 'investment-ticket',
-    category: 'investment',
-    question: 'What is the typical ticket size and investment structure?',
+    id: 'is-it-free',
+    category: 'free',
+    question: 'Is Founders Grid free to join and get featured?',
     answer:
-      'Tenity typically deploys up to $250,000 in initial pre-seed and seed tickets. We maintain capital reserves for follow-on participation in subsequent rounds and facilitate co-investment syndication with over 400+ institutional funds, corporate venture arms, and family offices across Europe and Asia.',
-    tag: 'Pre-Seed / Seed',
+      'Yes, access is 100% free. Founders are never charged to be featured, submit their products, join community channels, or receive peer feedback. There are no paywalls or placement fees.',
+    tag: '100% Free',
   },
   {
-    id: 'eligibility-criteria',
-    category: 'programs',
-    question: 'What are the core eligibility criteria for accelerator cohorts?',
+    id: 'how-products-get-featured',
+    category: 'featured',
+    question: 'How do products get featured on the platform?',
     answer:
-      'We back visionary founders building at the intersection of fintech, AI, insurtech, wealthtech, regtech, and digital assets. We evaluate founding team technical caliber, proprietary IP or defensible algorithms, early user or customer engagement, and strategic relevance to our 65+ banking and corporate partners.',
-    tag: 'Selection',
+      'Founders submit products through a short form [Submission Form Link: Add your link here]. Each week, 5–10 new products are featured in our weekly newsletter and shared on Instagram and X. We also publish a monthly issue on products gaining real traction. Featured products receive their own dedicated page.',
+    tag: 'Getting Featured',
   },
   {
-    id: 'equity-terms',
-    category: 'investment',
-    question: 'Do you take equity simply for joining the accelerator programs?',
+    id: 'community-rules',
+    category: 'rules',
+    question: 'What are the community rules and values?',
     answer:
-      'No. Tenity does not take arbitrary equity or charge participation fees for participating in our accelerator cohorts. Equity terms are negotiated transparently and strictly in connection with direct investment checks deployed by the Tenity Venture Fund.',
-    tag: 'Terms',
+      'Our values guide everything we do: 1) Build — we celebrate people who make things. 2) Progress over perfection — shipping beats waiting. 3) Access is free — founders are never charged. 4) Honest feedback — given kindly and specifically. 5) Open doors — regardless of background, stage, or discipline.',
+    tag: 'Community Rules',
   },
   {
-    id: 'corporate-poc',
-    category: 'corporate',
-    question: 'How does the corporate Proof-of-Concept (PoC) framework work?',
+    id: 'consent-takedown',
+    category: 'takedown',
+    question: 'What is the consent and takedown policy?',
     answer:
-      'Unlike traditional demo days that end with high-fives, Tenity runs structured 12-week venture client sprints. Cohort founders are paired directly with budget-holding executives at institutions like UBS, SIX, Generali, and VISA to validate integrations on test data, achieving an industry-leading 80%+ conversion to commercial software contracts.',
-    tag: 'Enterprise',
+      'Featured products get their own dedicated page, which founders can take down at any time. We honor founder consent unconditionally. You own your project and decide if, when, and how long it remains listed.',
+    tag: 'Takedown Policy',
   },
   {
-    id: 'global-locations',
-    category: 'hubs',
-    question: 'Which global hubs host accelerator batches and is physical presence required?',
+    id: 'funding-investor-disclaimer',
+    category: 'free',
+    question: 'Do you provide funding or guarantee investor responses?',
     answer:
-      'We operate permanent innovation centers in Zurich, London, Singapore, Hong Kong, Madrid, and Istanbul. Our programs follow a hybrid rhythm: virtual execution sprints paired with 2-3 high-impact in-person immersion weeks for executive networking, regulatory roundtables, and regional partner dealmaking.',
-    tag: 'Global Hubs',
+      'No. We do not claim that we provide funding, that investors are guaranteed to respond, or that any partner or sponsor exists. Founders Grid is a digital home for visibility and peer testing. If you plan to show founder pages to investors, have a lawyer review the consent and disclaimer wording first.',
+    tag: 'Funding Disclaimer',
   },
   {
-    id: 'visa-program',
-    category: 'programs',
-    question: 'What is the Visa Innovation Program Europe and how does it differ?',
+    id: 'who-can-join',
+    category: 'community',
+    question: 'Who can join Founders Grid and what can they share?',
     answer:
-      'The Visa Innovation Program Europe is an equity-free collaborative platform co-run by Tenity and Visa. Spanning 5 countries across Southern and Eastern Europe, it provides fintech scaleups with direct mentor access to Visa product architects and rapid onboarding to commercial banking pilots.',
-    tag: 'Partnership',
+      'We welcome builders in software, hardware, and creative work, including people who haven’t been noticed yet. You can join via our WhatsApp community (announcements plus cohort groups), Discord server, or newsletter sign-up.',
+    tag: 'Open Doors',
   },
   {
-    id: 'demo-day-syndicate',
-    category: 'investment',
-    question: 'How do portfolio companies access follow-on capital after graduation?',
+    id: 'testing-feedback',
+    category: 'community',
+    question: 'How do testing and feedback work on the platform?',
     answer:
-      'Graduating founders present at our bi-annual flagship Demo Days in Zurich and Singapore. Additionally, our dedicated portfolio platform team orchestrates direct warm introductions to top-tier global venture firms, providing continued guidance through Series A milestones.',
-    tag: 'Follow-On',
+      'Community members test each other’s products and give honest feedback, delivered kindly and specifically. When you share early prototypes, fellow makers give constructive critique on usability, bugs, and product feel.',
+    tag: 'Peer Testing',
   },
   {
-    id: 'batch-cadence',
-    category: 'programs',
-    question: 'What is the cohort calendar and application timeline?',
+    id: 'physical-hubs-roadmap',
+    category: 'community',
+    question: 'Are there physical hubs planned?',
     answer:
-      'We run two primary seasonal cohorts per year across our hubs (Spring and Autumn). Applications open roughly three months prior to kick-off. Each application undergoes rigorous two-stage review by our investment committee and corporate innovation board.',
-    tag: 'Cadence',
+      'Founders Grid applies the Silicon Valley idea of visibility and clustering, started online first, with physical hubs planned later on the roadmap.',
+    tag: 'Online First',
   },
 ];
 
@@ -87,7 +87,7 @@ interface CustomAnswer {
 
 export const FAQSection: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('all');
-  const [expandedId, setExpandedId] = useState<string | null>('investment-ticket');
+  const [expandedId, setExpandedId] = useState<string | null>('is-it-free');
   
   // Custom question state
   const [userQuery, setUserQuery] = useState('');
@@ -98,10 +98,11 @@ export const FAQSection: React.FC = () => {
 
   const categories = [
     { id: 'all', label: 'All Questions' },
-    { id: 'investment', label: 'Investment & Tickets' },
-    { id: 'programs', label: 'Accelerator Programs' },
-    { id: 'corporate', label: 'Corporate PoCs' },
-    { id: 'hubs', label: 'Hubs & Locations' },
+    { id: 'free', label: 'Free Access & Funding' },
+    { id: 'featured', label: 'Getting Featured' },
+    { id: 'rules', label: 'Community Rules' },
+    { id: 'takedown', label: 'Consent & Takedown' },
+    { id: 'community', label: 'Joining & Testing' },
   ];
 
   const filteredFaqs = PRESET_FAQS.filter((faq) => {
@@ -195,10 +196,10 @@ export const FAQSection: React.FC = () => {
   };
 
   const samplePrompts = [
-    'Can solo founders apply?',
-    'What if we are incorporated outside Switzerland?',
-    'Do you support Web3 and real-world asset tokenization?',
-    'How do corporate pilot contracts work?',
+    'Is Founders Grid free to join?',
+    'How do I submit my product?',
+    'What is the consent & takedown policy?',
+    'Do you provide funding or investment?',
   ];
 
   return (
@@ -214,7 +215,7 @@ export const FAQSection: React.FC = () => {
           <div className="lg:col-span-8">
             <div className="inline-flex items-center gap-2 text-xs sm:text-[13px] font-bold uppercase tracking-widest text-[#f0386b] mb-4 bg-[#f0386b]/10 border border-[#f0386b]/20 px-3.5 sm:px-4 py-2 rounded-full">
               <Sparkles size={15} />
-              <span>Infinity Knowledge Center</span>
+              <span>Rules, FAQ &amp; Consent</span>
             </div>
             <h2 className="text-[38px] min-[380px]:text-[48px] sm:text-[68px] md:text-[82px] lg:text-[90px] font-extrabold tracking-[-0.035em] leading-[0.96] text-white">
               <span className="block">Common questions.</span>
@@ -228,7 +229,7 @@ export const FAQSection: React.FC = () => {
 
           <div className="lg:col-span-4 pb-2 sm:pb-3">
             <p className="text-white/80 text-[15px] sm:text-lg md:text-[20px] leading-relaxed font-normal">
-              Explore essential facts regarding Tenity’s accelerator programs, ticket allocation, enterprise sandboxes, and investment standards.
+              Essential facts regarding our community rules, free access, weekly newsletter features, and consent &amp; takedown policies.
             </p>
           </div>
         </div>
@@ -238,10 +239,10 @@ export const FAQSection: React.FC = () => {
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 text-xs sm:text-sm font-bold uppercase tracking-wider text-white mb-2.5">
               <HelpCircle size={17} className="text-[#f0386b] shrink-0" />
-              <span>Ask about our programs &amp; investment criteria</span>
+              <span>Ask about Founders Grid &amp; Community Rules</span>
             </div>
             <p className="text-sm sm:text-base md:text-[17px] text-white/80 mb-6 leading-relaxed">
-              Have a specific question not covered below? Type it here to receive instant guidance from Tenity Intelligence.
+              Have a question about submissions, feedback circles, or policies? Type it below to get instant guidance.
             </p>
 
             <form

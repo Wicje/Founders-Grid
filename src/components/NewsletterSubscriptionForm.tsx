@@ -179,7 +179,7 @@ export const NewsletterSubscriptionForm: React.FC<NewsletterSubscriptionFormProp
           )}
 
           <p className="text-xs sm:text-[13px] text-white/55 mt-1 font-normal">
-            Weekly fintech intelligence, venture funding rounds, and executive event invites. No spam. Unsubscribe anytime.
+            5–10 new products featured every week, plus monthly traction issues. No spam. 100% free.
           </p>
         </form>
       )}

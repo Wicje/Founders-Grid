@@ -15,8 +15,8 @@ export const ContactModal: React.FC<ContactModalProps> = ({
 }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [organization, setOrganization] = useState('');
-  const [interest, setInterest] = useState('Venture Capital & Incubation');
+  const [discipline, setDiscipline] = useState('Software');
+  const [interest, setInterest] = useState('Submit a Product (Software, Hardware, Creative)');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
@@ -37,7 +37,6 @@ export const ContactModal: React.FC<ContactModalProps> = ({
     setSubmitted(false);
     setName('');
     setEmail('');
-    setOrganization('');
     setMessage('');
     onClose();
   };
@@ -62,10 +61,14 @@ export const ContactModal: React.FC<ContactModalProps> = ({
             <div className="w-18 h-18 rounded-full bg-[#f0386b]/20 border border-[#f0386b] text-[#f0386b] flex items-center justify-center mx-auto mb-6">
               <CheckCircle2 size={36} />
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">Message Sent</h3>
-            <p className="text-base text-white/75 max-w-sm mx-auto mb-8 leading-relaxed">
-              Thank you, <span className="text-white font-semibold">{name}</span>. A Tenity partner from your regional hub will reach out within 24 hours.
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">Welcome to Founders Grid</h3>
+            <p className="text-base text-white/75 max-w-sm mx-auto mb-4 leading-relaxed">
+              Thank you, <span className="text-white font-semibold">{name}</span>. You're part of a digital home where builders celebrate making things.
             </p>
+            <div className="text-xs font-mono text-white/50 bg-white/5 p-3 rounded-xl max-w-md mx-auto mb-8 border border-white/10">
+              Form Link: [Submission Form Link: Add your link here]<br />
+              Direct Contact: [Contact Email: hello@foundersgrid.co placeholder]
+            </div>
             <button
               onClick={handleReset}
               className="bg-[#f0386b] hover:bg-[#d82458] text-white text-sm font-bold px-8 py-3.5 rounded-full transition-colors cursor-pointer"
@@ -78,11 +81,18 @@ export const ContactModal: React.FC<ContactModalProps> = ({
             <div className="mb-7">
               <TenityLogo theme="dark" size="sm" className="mb-4" />
               <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-                Connect with Tenity
+                Join Founders Grid &amp; Submit
               </h2>
               <p className="text-sm text-white/65 mt-1.5 leading-relaxed">
-                Reach out to discuss venture funding, innovation programs, or strategic corporate partnership.
+                A digital community where software, hardware, and creative makers share what they're making and get honest feedback. 100% free forever.
               </p>
+            </div>
+
+            {/* Clearly marked placeholder inputs notice */}
+            <div className="mb-5 p-3.5 rounded-xl bg-white/5 border border-dashed border-white/20 text-white/80 text-xs font-mono">
+              <span className="text-[#f0386b] font-bold">Input Placeholders:</span><br />
+              • [Submission Form Link: Add your link here]<br />
+              • [Contact Email: hello@foundersgrid.co placeholder]
             </div>
 
             {error && (
@@ -101,7 +111,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="e.g. Alex Meier"
+                  placeholder="e.g. Maya Chen"
                   className="w-full bg-[#181818] border border-white/15 focus:border-[#f0386b] focus:ring-1 focus:ring-[#f0386b] rounded-2xl px-5 py-3.5 text-base text-white outline-none transition-colors placeholder:text-white/35"
                 />
               </div>
@@ -109,58 +119,61 @@ export const ContactModal: React.FC<ContactModalProps> = ({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs sm:text-sm font-semibold text-white/80 mb-2">
-                    Work Email *
+                    Email Address *
                   </label>
                   <input
                     type="email"
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="alex@fintech.io"
+                    placeholder="maya@builder.io"
                     className="w-full bg-[#181818] border border-white/15 focus:border-[#f0386b] focus:ring-1 focus:ring-[#f0386b] rounded-2xl px-5 py-3.5 text-base text-white outline-none transition-colors placeholder:text-white/35"
                   />
                 </div>
 
                 <div>
                   <label className="block text-xs sm:text-sm font-semibold text-white/80 mb-2">
-                    Organization
+                    Builder Discipline
                   </label>
-                  <input
-                    type="text"
-                    value={organization}
-                    onChange={(e) => setOrganization(e.target.value)}
-                    placeholder="Company or Venture"
-                    className="w-full bg-[#181818] border border-white/15 focus:border-[#f0386b] focus:ring-1 focus:ring-[#f0386b] rounded-2xl px-5 py-3.5 text-base text-white outline-none transition-colors placeholder:text-white/35"
-                  />
+                  <select
+                    value={discipline}
+                    onChange={(e) => setDiscipline(e.target.value)}
+                    className="w-full bg-[#181818] border border-white/15 focus:border-[#f0386b] focus:ring-1 focus:ring-[#f0386b] rounded-2xl px-5 py-3.5 text-base text-white outline-none transition-colors cursor-pointer"
+                  >
+                    <option value="Software">Software (Web, Mobile, Tools)</option>
+                    <option value="Hardware">Hardware (Electronics, Physical)</option>
+                    <option value="Creative">Creative (Design, Interactive)</option>
+                    <option value="Tester">Community Tester / Volunteer</option>
+                  </select>
                 </div>
               </div>
 
               <div>
                 <label className="block text-xs sm:text-sm font-semibold text-white/80 mb-2">
-                  Primary Area of Interest
+                  How would you like to participate?
                 </label>
                 <select
                   value={interest}
                   onChange={(e) => setInterest(e.target.value)}
                   className="w-full bg-[#181818] border border-white/15 focus:border-[#f0386b] focus:ring-1 focus:ring-[#f0386b] rounded-2xl px-5 py-3.5 text-base text-white outline-none transition-colors cursor-pointer"
                 >
-                  <option value="Venture Capital & Incubation">Venture Capital &amp; Startup Funding</option>
-                  <option value="Corporate Innovation & PoCs">Corporate Innovation &amp; PoC Acceleration</option>
-                  <option value="Visa Innovation Program">Visa Innovation Program Europe</option>
-                  <option value="Investor Dealflow Network">LP &amp; Co-Investor Syndication</option>
-                  <option value="Event Sponsorship / Speaking">Hub Events &amp; Fintech Week</option>
+                  <option value="Submit a Product">Submit a Product to be Featured (Free)</option>
+                  <option value="Join WhatsApp">Join WhatsApp Community (Announcements + Cohorts)</option>
+                  <option value="Join Discord">Join Discord (Builders &amp; Peer Testing)</option>
+                  <option value="Volunteer Sign-up">Volunteer Sign-up (Help with Cohorts &amp; Reviews)</option>
+                  <option value="Newsletter Only">Newsletter Sign-up Only</option>
                 </select>
               </div>
 
               <div>
                 <label className="block text-xs sm:text-sm font-semibold text-white/80 mb-2">
-                  Message
+                  What are you building or looking for?
                 </label>
                 <textarea
                   rows={3}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Share a brief overview of your team, startup stage, or corporate objectives..."
+                  placeholder="Share a short note about what you are making, your prototype link, or what kind of feedback helps you most..."
                   className="w-full bg-[#181818] border border-white/15 focus:border-[#f0386b] focus:ring-1 focus:ring-[#f0386b] rounded-2xl px-5 py-3 text-base text-white outline-none transition-colors resize-none placeholder:text-white/35"
                 />
               </div>
@@ -170,7 +183,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   type="submit"
                   className="w-full bg-[#f0386b] hover:bg-[#d82458] active:bg-[#c01d4b] text-white font-bold text-base py-4 rounded-full transition-all flex items-center justify-center gap-2.5 shadow-lg cursor-pointer"
                 >
-                  <span>Submit Inquiry</span>
+                  <span>Submit to Founders Grid</span>
                   <ArrowRight size={16} />
                 </button>
               </div>

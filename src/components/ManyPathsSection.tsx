@@ -11,36 +11,36 @@ export const ManyPathsSection: React.FC<ManyPathsSectionProps> = ({ onSelectAudi
 
   const paths = [
     {
-      id: 'startups',
-      title: 'Startups',
+      id: 'software',
+      title: 'Software Builders',
       description:
-        'From pre-seed funding to commercial pilots with leading banks and insurers. We plug you into a global network of mentors, co-investors, and corporate decision-makers.',
-      offerings: ['Up to $250k initial ticket', 'Direct access to 65+ financial institutions', 'Zero fee cohort infrastructure', 'Hub access across Europe & Asia'],
-      actionLabel: 'Explore Startup Programs',
+        'Share your web apps, mobile apps, developer tools, and open-source creations with builders who understand what it takes to ship and will test them with care.',
+      offerings: ['Short submission form', 'Community peer testing', 'Weekly newsletter feature (5–10 products)', 'Dedicated page with 100% takedown control'],
+      actionLabel: 'Join as Software Builder',
     },
     {
-      id: 'investors',
-      title: 'Investors',
+      id: 'hardware',
+      title: 'Hardware Builders',
       description:
-        'Gain direct allocation into high-conviction fintech, insurtech, AI, and digital asset startups vetted through our rigorous multi-hub pipeline and corporate stress-tests.',
-      offerings: ['Vetted dealflow from 2,000+ applicants/year', 'Syndication and co-investment rights', 'Quarterly portfolio performance reports', 'Exclusive Demo Days in Zurich & Singapore'],
-      actionLabel: 'Join Investor Network',
+        'Physical devices, electronics, robotics, and mechanical prototypes often struggle for digital visibility. We celebrate tangible makers who physically build things.',
+      offerings: ['Hardware prototype showcase', 'Peer review on design & ergonomics', 'Zero cost to be featured', 'Full founder consent & privacy'],
+      actionLabel: 'Join as Hardware Builder',
     },
     {
-      id: 'corporates',
-      title: 'Corporates',
+      id: 'creative',
+      title: 'Creative Builders',
       description:
-        'Solve real business challenges through co-designed accelerators, proof-of-concept sandboxes, and bespoke startup scouting tailored to your strategic digital agenda.',
-      offerings: ['Bespoke Proof-of-Concept delivery', 'Venture client model implementation', 'Executive foresight & market scanning', 'Pan-European & Asian fintech scouting'],
-      actionLabel: 'Partner as Corporate',
+        'Design systems, interactive tools, game engines, and creative software built with craft. Get honest feedback on usability, aesthetics, and user feel.',
+      offerings: ['Creative feedback circle', 'Shared on Instagram and X', 'Constructive, kind critique', 'Monthly traction issue candidate'],
+      actionLabel: 'Join as Creative Builder',
     },
     {
-      id: 'governments',
-      title: 'Governments',
+      id: 'testers-volunteers',
+      title: 'Testers & Volunteers',
       description:
-        'Accelerate national fintech ecosystems, craft progressive regulatory sandboxes, and foster foreign direct investment via cross-border innovation bridges.',
-      offerings: ['National fintech hub orchestration', 'Regulatory sandbox advisory', 'Ecosystem impact measurement', 'Cross-border trade corridor programs'],
-      actionLabel: 'Collaborate with Tenity',
+        'Test new products, provide kind and specific feedback, and help support cohort groups and newsletter curation across the digital community.',
+      offerings: ['Early access to test builds', 'Direct connection with makers', 'Volunteer community roles', 'Open doors regardless of stage'],
+      actionLabel: 'Sign Up as Volunteer / Tester',
     },
   ];
 
@@ -49,7 +49,7 @@ export const ManyPathsSection: React.FC<ManyPathsSectionProps> = ({ onSelectAudi
   };
 
   return (
-    <section className="bg-black text-white py-16 sm:py-24 md:py-32 border-b border-white/10">
+    <section id="join-community" className="bg-black text-white py-16 sm:py-24 md:py-32 border-b border-white/10 scroll-mt-16">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-12">
         
         {/* Headline */}
