@@ -49,15 +49,15 @@ export const ManyPathsSection: React.FC<ManyPathsSectionProps> = ({ onSelectAudi
   };
 
   return (
-    <section className="bg-black text-white py-24 md:py-32 border-b border-white/10">
-      <div className="max-w-[1240px] mx-auto px-6 md:px-12">
+    <section className="bg-black text-white py-16 sm:py-24 md:py-32 border-b border-white/10">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-12">
         
         {/* Headline */}
-        <div className="mb-20 max-w-[620px]">
-          <h2 className="text-[44px] sm:text-[54px] md:text-[68px] font-extrabold tracking-[-0.03em] leading-[0.98] text-white">
+        <div className="mb-12 sm:mb-16 md:mb-20 max-w-[700px]">
+          <h2 className="text-[38px] min-[380px]:text-[46px] sm:text-[60px] md:text-[76px] lg:text-[90px] font-extrabold tracking-[-0.035em] leading-[0.96] text-white">
             <span className="block">Many paths.</span>
-            <span className="flex items-center flex-wrap">
-              <InlinePill theme="white" className="w-[78px] sm:w-[94px] h-[34px] sm:h-[42px] my-1" />
+            <span className="flex items-center flex-wrap gap-x-2">
+              <InlinePill theme="white" className="w-[68px] min-[380px]:w-[84px] sm:w-[116px] md:w-[140px] h-[30px] min-[380px]:h-[36px] sm:h-[50px] md:h-[60px] my-1 sm:my-1.5 shadow-md shrink-0" />
               <span>One</span>
             </span>
             <span className="block">shared</span>
@@ -66,43 +66,43 @@ export const ManyPathsSection: React.FC<ManyPathsSectionProps> = ({ onSelectAudi
         </div>
 
         {/* 2x2 Grid of Audience Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-7 md:gap-8">
           {paths.map((item) => {
             const isExpanded = expandedId === item.id;
             return (
               <div
                 key={item.id}
                 onClick={() => toggleExpand(item.id)}
-                className={`bg-[#0d0d0d] hover:bg-[#131313] border border-white/10 hover:border-white/25 rounded-2xl p-8 md:p-10 transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-[180px] group ${
-                  isExpanded ? 'border-white/30 bg-[#121212] ring-1 ring-white/10' : ''
+                className={`bg-[#0d0d0d] hover:bg-[#151515] border border-white/12 hover:border-white/30 rounded-[22px] sm:rounded-3xl p-5 sm:p-8 md:p-11 transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-[160px] sm:min-h-[210px] group ${
+                  isExpanded ? 'border-white/40 bg-[#141414] ring-1 ring-white/20 shadow-2xl scale-[1.01]' : 'hover:scale-[1.01]'
                 }`}
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <h3 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight group-hover:text-[#f0386b] transition-colors">
+                    <h3 className="text-2xl sm:text-3xl md:text-[34px] font-extrabold text-white tracking-tight group-hover:text-[#f0386b] transition-colors">
                       {item.title}
                     </h3>
                     <span 
-                      className={`w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-[#f0386b] transition-transform duration-300 ${
-                        isExpanded ? 'rotate-90 bg-white/10 text-white' : 'group-hover:border-[#f0386b]'
+                      className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/20 flex items-center justify-center text-[#f0386b] transition-all duration-300 ${
+                        isExpanded ? 'rotate-90 bg-white/10 text-white' : 'group-hover:border-[#f0386b] group-hover:scale-110'
                       }`}
                       aria-label={isExpanded ? 'Collapse' : 'Expand'}
                     >
-                      {isExpanded ? <Minus size={14} /> : <Plus size={16} />}
+                      {isExpanded ? <Minus size={16} className="sm:w-[18px] sm:h-[18px]" /> : <Plus size={18} className="sm:w-5 sm:h-5" />}
                     </span>
                   </div>
 
                   {/* Expanded Content Drawer */}
                   {isExpanded && (
-                    <div className="mt-6 pt-6 border-t border-white/10 animate-in fade-in slide-in-from-top-2 duration-300">
-                      <p className="text-sm text-white/75 leading-relaxed mb-5">
+                    <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-white/10 animate-in fade-in slide-in-from-top-2 duration-300">
+                      <p className="text-sm sm:text-base md:text-[17px] text-white/90 leading-relaxed mb-5 sm:mb-6 font-normal">
                         {item.description}
                       </p>
 
-                      <ul className="space-y-2 mb-6">
+                      <ul className="space-y-3 sm:space-y-3.5 mb-6 sm:mb-8">
                         {item.offerings.map((offering, idx) => (
-                          <li key={idx} className="flex items-center gap-2.5 text-xs text-white/60">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#f0386b]" />
+                          <li key={idx} className="flex items-center gap-3 sm:gap-3.5 text-sm sm:text-[15px] md:text-base text-white/75">
+                            <span className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-[#f0386b] shrink-0" />
                             <span>{offering}</span>
                           </li>
                         ))}
@@ -113,19 +113,19 @@ export const ManyPathsSection: React.FC<ManyPathsSectionProps> = ({ onSelectAudi
                           e.stopPropagation();
                           onSelectAudience?.(item.title);
                         }}
-                        className="inline-flex items-center gap-2 text-xs font-semibold text-white hover:text-[#f0386b] transition-colors"
+                        className="inline-flex items-center gap-2.5 sm:gap-3 text-sm sm:text-base font-bold text-white hover:text-[#f0386b] transition-colors py-1 cursor-pointer"
                       >
                         <span>{item.actionLabel}</span>
-                        <ArrowRight size={12} />
+                        <ArrowRight size={15} />
                       </button>
                     </div>
                   )}
                 </div>
 
                 {!isExpanded && (
-                  <div className="flex justify-end pt-8">
-                    <span className="text-[#f0386b] opacity-80 group-hover:opacity-100 transition-opacity">
-                      <Plus size={18} />
+                  <div className="flex justify-end pt-6 sm:pt-8">
+                    <span className="text-[#f0386b] opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all">
+                      <Plus size={22} />
                     </span>
                   </div>
                 )}

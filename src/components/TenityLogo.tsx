@@ -16,15 +16,15 @@ export const TenityLogo: React.FC<TenityLogoProps> = ({
   const iconColor = isLightText ? '#FFFFFF' : '#000000';
 
   const sizeClasses = {
-    sm: 'text-base gap-2',
-    md: 'text-xl gap-2.5',
-    lg: 'text-3xl gap-3',
+    sm: 'text-xl gap-2.5',
+    md: 'text-2xl sm:text-[26px] gap-3',
+    lg: 'text-4xl sm:text-5xl gap-4',
   };
 
   const iconSizes = {
-    sm: 18,
-    md: 22,
-    lg: 32,
+    sm: 24,
+    md: 28,
+    lg: 40,
   };
 
   const dim = iconSizes[size];
@@ -68,14 +68,9 @@ export const InlinePill: React.FC<{
   
   return (
     <span 
-      className={`inline-block rounded-full align-middle transition-transform hover:scale-105 ${bg} ${className}`}
-      style={{
-        width: '4.5rem',
-        height: '2rem',
-        marginRight: '0.45rem',
-        marginLeft: '0.1rem',
-      }}
+      className={`inline-block rounded-full align-middle transition-transform hover:scale-105 mr-2.5 ml-0.5 ${bg} ${className || 'w-18 sm:w-24 h-8 sm:h-11'}`}
       aria-hidden="true"
     />
   );
 };
+

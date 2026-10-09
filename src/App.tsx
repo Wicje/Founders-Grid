@@ -13,6 +13,8 @@ import { ProofInNumbersSection } from './components/ProofInNumbersSection';
 import { AmbitionResultsSection } from './components/AmbitionResultsSection';
 import { ManyPathsSection } from './components/ManyPathsSection';
 import { ImpossibleToPossibleSection } from './components/ImpossibleToPossibleSection';
+import { GlobalHubsVisualization } from './components/GlobalHubsVisualization';
+import { FAQSection } from './components/FAQSection';
 import { FooterSection } from './components/FooterSection';
 import { ContactModal } from './components/ContactModal';
 import { DetailModal, ModalData } from './components/DetailModal';
@@ -192,7 +194,29 @@ export default function App() {
     });
   };
 
+  const handleHubExplore = (hubName: string) => {
+    setModalData({
+      badge: 'Global Ecosystem',
+      title: `Tenity ${hubName} Hub`,
+      subtitle: `Accelerating local fintech pioneers with global venture capital and tier-1 corporate partnerships.`,
+      content: `Our ${hubName} team leads flagship accelerator tracks, enterprise innovation sandboxes, and bespoke corporate scouting. Connect with our local investment and program directors to explore cohorts or partnership opportunities.`,
+      bullets: [
+        'Dedicated on-the-ground program management and mentor network',
+        'Direct access to institutional banking and insurance partners',
+        'Cross-border expansion support across our other 5 global hubs',
+        'Fast-track application access for upcoming cohort cycles',
+      ],
+      actionText: `Contact ${hubName} Team`,
+      onAction: () => setIsContactOpen(true),
+    });
+  };
+
   const handleLegalClick = (title: string) => {
+    if (title.startsWith('Tenity Hub — ')) {
+      const hubName = title.replace('Tenity Hub — ', '');
+      handleHubExplore(hubName);
+      return;
+    }
     setModalData({
       badge: 'Legal & Info',
       title,
@@ -260,8 +284,19 @@ export default function App() {
       {/* 9. Light Section: "From impossible [pill] to possible" Bento */}
       <ImpossibleToPossibleSection onCardClick={handleBentoClick} />
 
-      {/* 10. Dark Section: "Stay in our orbit" & Footer */}
-      <FooterSection onLegalClick={handleLegalClick} />
+      {/* 10. Interactive Global Hubs & Data Visualization (Recharts + Interactive Vector Map) */}
+      <GlobalHubsVisualization onHubExplore={handleHubExplore} />
+
+      {/* 11. Dark Section: Infinity FAQ & Knowledge Exploration */}
+      <FAQSection />
+
+      {/* 12. Dark Section: "Stay in our orbit" & Footer */}
+      <FooterSection 
+        onLegalClick={handleLegalClick}
+        onNewsletterSuccess={(email) => {
+          // Toast or modal acknowledgment can be shown if needed
+        }}
+      />
 
       {/* Contact & Inquiry Modal */}
       <ContactModal

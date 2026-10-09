@@ -43,57 +43,57 @@ export const ContactModal: React.FC<ContactModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
       <div 
-        className="relative w-full max-w-lg bg-[#0e0e0e] text-white border border-white/15 rounded-3xl p-8 sm:p-10 shadow-2xl overflow-hidden"
+        className="relative w-full max-w-xl max-h-[90vh] overflow-y-auto bg-[#0e0e0e] text-white border border-white/15 rounded-[28px] sm:rounded-[32px] p-6 sm:p-10 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors cursor-pointer"
+          className="absolute top-5 right-5 sm:top-6 sm:right-6 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors cursor-pointer z-10"
           aria-label="Close dialog"
         >
-          <X size={18} />
+          <X size={19} />
         </button>
 
         {submitted ? (
-          <div className="text-center py-8 animate-in zoom-in-95 duration-200">
-            <div className="w-16 h-16 rounded-full bg-[#f0386b]/20 border border-[#f0386b] text-[#f0386b] flex items-center justify-center mx-auto mb-6">
-              <CheckCircle2 size={32} />
+          <div className="text-center py-10 animate-in zoom-in-95 duration-200">
+            <div className="w-18 h-18 rounded-full bg-[#f0386b]/20 border border-[#f0386b] text-[#f0386b] flex items-center justify-center mx-auto mb-6">
+              <CheckCircle2 size={36} />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">Message Sent</h3>
-            <p className="text-sm text-white/70 max-w-sm mx-auto mb-8">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">Message Sent</h3>
+            <p className="text-base text-white/75 max-w-sm mx-auto mb-8 leading-relaxed">
               Thank you, <span className="text-white font-semibold">{name}</span>. A Tenity partner from your regional hub will reach out within 24 hours.
             </p>
             <button
               onClick={handleReset}
-              className="bg-[#f0386b] hover:bg-[#d82458] text-white text-xs font-semibold px-6 py-2.5 rounded-full transition-colors"
+              className="bg-[#f0386b] hover:bg-[#d82458] text-white text-sm font-bold px-8 py-3.5 rounded-full transition-colors cursor-pointer"
             >
               Done
             </button>
           </div>
         ) : (
           <div>
-            <div className="mb-6">
+            <div className="mb-7">
               <TenityLogo theme="dark" size="sm" className="mb-4" />
               <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
                 Connect with Tenity
               </h2>
-              <p className="text-xs sm:text-sm text-white/60 mt-1">
+              <p className="text-sm text-white/65 mt-1.5 leading-relaxed">
                 Reach out to discuss venture funding, innovation programs, or strategic corporate partnership.
               </p>
             </div>
 
             {error && (
-              <div className="mb-4 p-3 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-200 text-xs">
+              <div className="mb-5 p-3.5 rounded-xl bg-rose-500/20 border border-rose-500/40 text-rose-200 text-xs sm:text-sm">
                 {error}
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4.5">
               <div>
-                <label className="block text-xs font-semibold text-white/80 mb-1.5">
+                <label className="block text-xs sm:text-sm font-semibold text-white/80 mb-2">
                   Full Name *
                 </label>
                 <input
@@ -102,13 +102,13 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="e.g. Alex Meier"
-                  className="w-full bg-[#181818] border border-white/15 focus:border-[#f0386b] focus:ring-1 focus:ring-[#f0386b] rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors placeholder:text-white/30"
+                  className="w-full bg-[#181818] border border-white/15 focus:border-[#f0386b] focus:ring-1 focus:ring-[#f0386b] rounded-2xl px-5 py-3.5 text-base text-white outline-none transition-colors placeholder:text-white/35"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-white/80 mb-1.5">
+                  <label className="block text-xs sm:text-sm font-semibold text-white/80 mb-2">
                     Work Email *
                   </label>
                   <input
@@ -117,12 +117,12 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="alex@fintech.io"
-                    className="w-full bg-[#181818] border border-white/15 focus:border-[#f0386b] focus:ring-1 focus:ring-[#f0386b] rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors placeholder:text-white/30"
+                    className="w-full bg-[#181818] border border-white/15 focus:border-[#f0386b] focus:ring-1 focus:ring-[#f0386b] rounded-2xl px-5 py-3.5 text-base text-white outline-none transition-colors placeholder:text-white/35"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-white/80 mb-1.5">
+                  <label className="block text-xs sm:text-sm font-semibold text-white/80 mb-2">
                     Organization
                   </label>
                   <input
@@ -130,19 +130,19 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     value={organization}
                     onChange={(e) => setOrganization(e.target.value)}
                     placeholder="Company or Venture"
-                    className="w-full bg-[#181818] border border-white/15 focus:border-[#f0386b] focus:ring-1 focus:ring-[#f0386b] rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors placeholder:text-white/30"
+                    className="w-full bg-[#181818] border border-white/15 focus:border-[#f0386b] focus:ring-1 focus:ring-[#f0386b] rounded-2xl px-5 py-3.5 text-base text-white outline-none transition-colors placeholder:text-white/35"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-white/80 mb-1.5">
+                <label className="block text-xs sm:text-sm font-semibold text-white/80 mb-2">
                   Primary Area of Interest
                 </label>
                 <select
                   value={interest}
                   onChange={(e) => setInterest(e.target.value)}
-                  className="w-full bg-[#181818] border border-white/15 focus:border-[#f0386b] focus:ring-1 focus:ring-[#f0386b] rounded-xl px-4 py-2.5 text-sm text-white outline-none transition-colors"
+                  className="w-full bg-[#181818] border border-white/15 focus:border-[#f0386b] focus:ring-1 focus:ring-[#f0386b] rounded-2xl px-5 py-3.5 text-base text-white outline-none transition-colors cursor-pointer"
                 >
                   <option value="Venture Capital & Incubation">Venture Capital &amp; Startup Funding</option>
                   <option value="Corporate Innovation & PoCs">Corporate Innovation &amp; PoC Acceleration</option>
@@ -153,7 +153,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-white/80 mb-1.5">
+                <label className="block text-xs sm:text-sm font-semibold text-white/80 mb-2">
                   Message
                 </label>
                 <textarea
@@ -161,17 +161,17 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Share a brief overview of your team, startup stage, or corporate objectives..."
-                  className="w-full bg-[#181818] border border-white/15 focus:border-[#f0386b] focus:ring-1 focus:ring-[#f0386b] rounded-xl px-4 py-2 text-sm text-white outline-none transition-colors resize-none placeholder:text-white/30"
+                  className="w-full bg-[#181818] border border-white/15 focus:border-[#f0386b] focus:ring-1 focus:ring-[#f0386b] rounded-2xl px-5 py-3 text-base text-white outline-none transition-colors resize-none placeholder:text-white/35"
                 />
               </div>
 
-              <div className="pt-2">
+              <div className="pt-3">
                 <button
                   type="submit"
-                  className="w-full bg-[#f0386b] hover:bg-[#d82458] text-white font-bold text-sm py-3 rounded-full transition-all flex items-center justify-center gap-2 shadow-lg"
+                  className="w-full bg-[#f0386b] hover:bg-[#d82458] active:bg-[#c01d4b] text-white font-bold text-base py-4 rounded-full transition-all flex items-center justify-center gap-2.5 shadow-lg cursor-pointer"
                 >
                   <span>Submit Inquiry</span>
-                  <ArrowRight size={14} />
+                  <ArrowRight size={16} />
                 </button>
               </div>
             </form>
